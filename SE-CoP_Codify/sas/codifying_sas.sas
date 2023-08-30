@@ -27,7 +27,7 @@ data Shopping_data;
    length Item_Name $50.;
    do i = 1 to 20000;
       Item_Name = cats("Item ", put(i, 5.));
-      Price = ceil(ranuni(0) * 100);
+      Price = ceil(ranuni(0) * 101);
       output;
    end;
    drop i;
