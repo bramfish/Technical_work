@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Examples</title>
+</head>
+<body>
+    <!-- Example 1: Video -->
+    <video src="example.mp4" controls></video>
+
+    <!-- Example 2: Canvas -->
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
+    </script>
+
+    <!-- Example 3: Geolocation -->
+    <p>Your location:</p>
+    <div id="location"></div>
+    <script>
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+        }
+
+        function showPosition(position) {
+            document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+
+    <!-- Example 4: Local Storage -->
+    <p>Enter your name:</p>
+    <input type="text" id="name">
+    <button onclick="saveName()">Save</button>
+    <script>
+        function saveName() {
+            var name = document.getElementById("name").value;
+            localStorage.setItem("name", name);
+            alert("Name saved!");
+        }
+    </script>
+
+    <!-- Example 5: Audio -->
+    <audio src="example.mp3" controls></audio>
+
+    <!-- Example 6: Drag and Drop -->
+    <p>Drag the image into the box:</p>
+    <img src="example.jpg" draggable="true" ondragstart="drag(event)">
+    <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+</html>

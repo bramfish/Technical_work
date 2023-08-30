@@ -1,0 +1,56 @@
+1. write a method to connect to the PostGres database "DataScience" 
+2. write a second method to using above connection and read the table "Algorithm" and fatch the first 1000 rows and return Algorithm Name, Algorithm File Locator fields.
+3. write the third method  which takes return value of above method and search for the string "Sequencetial Patterns" in Algorithm Name field and return the Algorithm File Locator filed data.
+=====
+
+Using flask framework create a webpage and display "Software Engineering Community Practice" as Title
+
+====
+
+creat a html page with following elements in the page
+1. fetch a image from internet about "software engineering community of practice" use this image a banner of the page.
+2. Create 3 Divs horizentally and display the following contents:
+i) first div: Fetech the information from internet about Domain Driven Designs and add a paragraph of maximum 100 words
+ii) second div: Fetech the information from internet about Clean Coding approach and add a paragraph of maximum 100 words.
+iii) third div: Fetech the information from internet about CQRS pattern and add a paragraph of maximum 100 words
+3. Add a calender of events after the three divs above
+
+======
+
+1. write a procedure to read a csv file "Algorithm"
+2. write the procedure to fetch the first column for the Algorithm file called Algorithm Name
+3. write a procedure to search the string "Association rules" from the Algorithm Name field and return the Algorithm File Locator field.
+
+=====
+create a csv file with the synthentic data of shopping transaction with fields (Item Name, Price) with 20000 rows.
+Store the csv file with Shopping_data name in Data sub folder
+
+=====
+create a method to read Shopping_data.csv file from Data sub-folder and return the data as list
+create second method to use the list from the first mehtod and apply Association Rules Algorithm on first field, print the results on console.
+
+RabbitMQ messages code prompts..
+write a biolerplat code for using the CRQS pattern
+
+=========
+
+Terraform
+
+connect to the GCP
+create VPC using google official module 
+Create three subnets under the VPC
+Create windows virtual machine under the first subnet
+Create a load balance under the second subnet
+Create a DNS under the second subnet
+Create PostGres DB under the third subnet
+create firewalls between first and third subnet
+create firewalls between second and first subnet
+
+
+=====
+
+SaS to Python
+
+https://ms.mcmaster.ca/peter/s4p03/s4p03_0304/sasnotes.htm
+
+https://support.sas.com/rnd/app/examples/STATexamples.html
